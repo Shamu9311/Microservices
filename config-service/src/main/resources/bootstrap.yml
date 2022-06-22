@@ -5,12 +5,13 @@ spring:
   cloud:
     config:
       server:
-        uri:
-        searchPath: config-data
-        username: ${GIT_USER}
-        password: ${GIT_PASSWORD}
+        git:
+          uri: https://github.com/Shamu9311/Microservices.git
+          searchPaths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          default-label: "master"
   security:
     user:
       name: root
       password: s3cr3t
-
