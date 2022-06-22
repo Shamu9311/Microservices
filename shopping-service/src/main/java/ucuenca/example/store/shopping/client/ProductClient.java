@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ucuenca.example.store.shopping.model.Product;
 
-@FeignClient(name = "product-service")
+@FeignClient(name = "service-product")
 @RequestMapping(value = "/products")
 public interface ProductClient {
     @GetMapping(value = "/{id}")
